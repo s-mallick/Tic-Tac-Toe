@@ -1,2 +1,3 @@
 # Tic-Tac-Toe
-using Python language
+<br>
+This is a siimple tic-tac-toe game using Python language
