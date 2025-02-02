@@ -13,7 +13,7 @@ def assignvalue(mylist, index, letter):
     if mylist[index] == " ":
         mylist[index] = letter
     else:
-        print("This cell is already filled, try again.")
+        print("This cell is already filled")
         return False
     return True
 
@@ -22,7 +22,7 @@ def check(row1, row2, row3):
         return "X"
     if (row1[0] == row2[0] == row3[0] == "O") or (row1[1] == row2[1] == row3[1] == "O") or (row1[2] == row2[2] == row3[2] == "O") or (row1[0] == row1[1] == row1[2] == "O") or (row2[0] == row2[1] == row2[2] == "O") or (row3[0] == row3[1] == row3[2] == "O") or (row1[0] == row2[1] == row3[2] == "O") or (row1[2] == row2[1] == row3[0] == "O"):
         return "O"
-    return None
+    return False
 
 def tictactoe():
     player1 = input("Player1 enter your choice 'X' or 'O': ").upper()
@@ -57,6 +57,8 @@ def tictactoe():
         if winner:
             print(f"{winner} is the winner!")
             break
+    else:
+        print("It's Draw")
 
 if __name__ == "__main__":
     tictactoe()
